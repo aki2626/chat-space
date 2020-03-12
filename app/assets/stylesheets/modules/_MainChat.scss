@@ -1,0 +1,106 @@
+
+.MainChat {
+  background-color: $MainWhiteColor;
+  height: 100%;
+  width: calc(100vw - 300px);
+  .informations {
+    width: 100%;
+    height: 100px;
+    border-bottom: solid 1px #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    .RightInformation{
+      margin-left:40px;
+      &__GroupName{
+        color:#333333;
+        font-size: 20px;
+        margin:35px 0px 15px 0px;
+      }
+      &__Member{
+        color:#999999;
+        font-size: 12px;
+      }
+    }
+    .LeftInformation{
+      width:72px;
+      height: $LeftInfoHeight;
+      margin: 28px 40px 32px 0px;
+      border: 1px solid $BtnColor; 
+      text-align: center;
+      &__btn{
+        color: $BtnColor;
+        font-size: $MainFontSize;
+        line-height:$LeftInfoHeight;
+        text-decoration: none;
+      }
+    }
+  }
+  .messages {
+    width: 100%;
+    height: calc(100% - 100px - 90px);
+    padding:35px 0px 0px 40px;
+    background-color: #fafafa;
+    .message{
+      margin-bottom: 46px;
+      .UserData{
+        display: flex;
+        margin-bottom:12px;
+        &__name{
+          color: #333333;
+          font-size: $MainFontSize;
+        }
+        &__CreateDate{
+          color: #999999;
+          font-size:12px;
+        }
+      }
+      &__text{
+        color: #434A54;
+        font-size:14px;
+      }
+    }
+  }
+  .form {
+    width: 100%;
+    height: 90px;
+    background-color: $FormGrayColor;
+    padding: 20px 40px;
+    .FormArea{
+      height: $FormAreaHeight;
+      display:flex;
+      .TypeChat{
+        background-color: $MainWhiteColor;
+        padding:0 10px;
+        margin-right:15px;
+        width:100%;
+        position: relative;
+        display: flex;
+        &__text{        
+          color: $FormGrayColor;
+          line-height: $FormAreaHeight;
+          width: 100%;
+          border-style:none;
+          outline: none;    
+          font-size: $MainFontSize;
+        }
+        &__image{
+          position: absolute;
+          font-size: 20px;
+          line-height: $FormAreaHeight;
+          right: 10px;
+          &--none{
+            display: none;
+          }
+        }
+      }
+      &__SendBtn{
+        width:100px;
+        line-height: $FormAreaHeight;
+        background-color: $BtnColor;
+        color: $MainWhiteColor;
+        font-size: $MainFontSize;
+        text-align: center;
+      }
+    }
+  }
+}

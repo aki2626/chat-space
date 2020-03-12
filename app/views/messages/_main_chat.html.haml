@@ -1,0 +1,37 @@
+.MainChat
+  .informations
+    .RightInformation
+      .RightInformation__GroupName
+        test
+      .RightInformation__Member
+        Member:masa
+    .LeftInformation
+      .LeftInformation__btn
+      = link_to "#",class: "LeftInformation__btn" do
+        Edit
+  .messages
+    .message
+      .UserData
+        .UserData__name
+          masa
+        .UserData__CreateDate
+          2019//11/20(Wed)17:43:01
+      .massage__text
+        おはよう！
+    .message
+      .UserData
+        .UserData__name
+          masa
+        .UserData__CreateDate
+          2019//11/20(Wed)17:43:01
+      .massage__text
+        おはよう！
+  .form
+    %form.FormArea
+      .TypeChat
+        %input{class: "TypeChat__text", type: "text", placeholder: "type a message"}
+        %label{class: "TypeChat__image"}
+          = icon('fas', 'image', class: "TypeChat__image")             
+          %input{class: "TypeChat__image--none", type: "file"}
+      .FormArea__SendBtn
+        %input{class: "FormArea__SendBtn", type: "submit", value: "Send"}

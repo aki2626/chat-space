@@ -1,0 +1,60 @@
+
+.SideBar {
+  background-color: #253141;
+  height:100%;
+  width:300px;
+  .UserBox {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .UserName {
+      height: $UserNameHeight;
+      width: calc(100% - 20px - 20px);
+      display: flex;
+      justify-content: space-between;
+      &__name{
+        color: $MainWhiteColor;
+        font-size: $MainFontSize;
+        line-height: $UserNameHeight;
+      }
+      &__link{
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+      }
+      &__btn{
+        color: $MainWhiteColor;
+        text-decoration: none;
+        line-height: $UserNameHeight;
+        &--groups{
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+  .GroupBox {
+    height: calc(100% - 100px);
+    width: 100%;
+    background-color: #2f3e51;
+    .FirstGroup {
+      height: 65px;
+      width: 100%;
+      padding: 0 20px;
+      color: $MainWhiteColor;
+      font-weight: bold;
+      position: relative;
+      &__GroupName{
+        font-size: 15px;
+        position: absolute;
+        top:20px;
+      }
+      &__message{
+        font-size: 11px;
+        position: absolute;
+        top: 40px;
+      }
+    }
+  }
+}

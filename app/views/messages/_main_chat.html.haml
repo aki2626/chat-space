@@ -11,27 +11,27 @@
         Edit
   .messages
     .message
-      .message__UserData
-        .message__UserData--name
+      .UserData
+        .UserData__name
           masa
-        .message__UserData--CreateDate
+        .UserData__CreateDate
           2019//11/20(Wed)17:43:01
       .massage__text
         おはよう！
     .message
-      .message__UserData
-        .message__UserData--name
+      .UserData
+        .UserData__name
           masa
-        .message__UserData--CreateDate
+        .UserData__CreateDate
           2019//11/20(Wed)17:43:01
       .massage__text
         おはよう！
   .form
     %form.FormArea
-      .FormArea__TypeChat
-        %input{class: "FormArea__TypeChat--text", type: "text", placeholder: "type a message"}
-        %label{class: "FormArea__TypeChat--image"}
-          = icon('fas', 'image', class: "FormArea__TypeChat--image")             
-          %input{class: "FormArea__TypeChat--none", type: "file"}
+      .TypeChat
+        %input{class: "TypeChat__text", type: "text", placeholder: "type a message"}
+        %label{class: "TypeChat__image"}
+          = icon('fas', 'image', class: "TypeChat__image")             
+          %input{class: "TypeChat__image--none", type: "file"}
       .FormArea__SendBtn
         %input{class: "FormArea__SendBtn", type: "submit", value: "Send"}

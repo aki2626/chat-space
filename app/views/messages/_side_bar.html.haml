@@ -2,12 +2,12 @@
   .UserBox
     .UserName
       .UserName__name
-        masa
+        = current_user.name
       .UserName__link
         = link_to "#", class: "UserName__btn UserName__btn--groups" do
           = icon('fas', 'edit')
           %span<>
-        = link_to "#", class: "UserName__btn UserName__btn--option" do
+        = link_to edit_user_path(current_user), class: "UserName__btn UserName__btn--option" do
           = icon('fas', 'cog')
           %span<>
   .GroupBox

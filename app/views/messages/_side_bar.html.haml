@@ -11,14 +11,10 @@
           = icon('fas', 'cog')
           %span<>
   .GroupBox
-    .FirstGroup
-      .FirstGroup__GroupName
-        techcamp
-      .FirstGroup__message
-        まだメッセージがありません
-    
-    .FirstGroup
-      .FirstGroup__GroupName
-        techcamp
-      .FirstGroup__message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .FirstGroup
+        = link_to '#', class: "FirstGroup__decoration" do
+          .FirstGroup__GroupName
+            = group.name
+          .FirstGroup__message
+            まだメッセージがありません

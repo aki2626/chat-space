@@ -45,6 +45,10 @@
       color: $MainWhiteColor;
       font-weight: bold;
       position: relative;
+      &__decoration{
+        color: $MainWhiteColor;
+        text-decoration: none;
+      }
       &__GroupName{
         font-size: 15px;
         position: absolute;

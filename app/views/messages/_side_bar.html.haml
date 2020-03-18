@@ -13,8 +13,8 @@
   .GroupBox
     - current_user.groups.each do |group|
       .FirstGroup
-        = link_to '#', class: "FirstGroup__decoration" do
+        = link_to group_messages_path(group), class: "FirstGroup__decoration" do
           .FirstGroup__GroupName
             = group.name
           .FirstGroup__message
-            まだメッセージがありません
+            = group.show_last_message

@@ -2,36 +2,26 @@
   .informations
     .RightInformation
       .RightInformation__GroupName
-        test
-      .RightInformation__Member
-        Member:masa
+        = @group.name
+      %ul.RightInformationMembers
+        %li<
+          Member:
+        - @group.users.each do |user|
+          %li.RightInformationMembers__member<
+            = user.name
     .LeftInformation
       .LeftInformation__btn
-      = link_to "#",class: "LeftInformation__btn" do
+      = link_to edit_group_path(@group),class: "LeftInformation__btn" do
         Edit
   .messages
-    .message
-      .UserData
-        .UserData__name
-          masa
-        .UserData__CreateDate
-          2019//11/20(Wed)17:43:01
-      .massage__text
-        おはよう！
-    .message
-      .UserData
-        .UserData__name
-          masa
-        .UserData__CreateDate
-          2019//11/20(Wed)17:43:01
-      .massage__text
-        おはよう！
+    = render @messages      
   .form
-    %form.FormArea
-      .TypeChat
-        %input{class: "TypeChat__text", type: "text", placeholder: "type a message"}
-        %label{class: "TypeChat__image"}
-          = icon('fas', 'image', class: "TypeChat__image")             
-          %input{class: "TypeChat__image--none", type: "file"}
-      .FormArea__SendBtn
-        %input{class: "FormArea__SendBtn", type: "submit", value: "Send"}
+    =form_for [@group, @message] do |f|
+      .FormArea
+        .TypeChat
+          = f.text_field :content, class: "TypeChat__text", placeholder: "type a message"
+          = f.label :image, class: "TypeChat__image" do
+            = icon('fas', 'image', class: "TypeChat__image")             
+            = f.file_field :image, class: "TypeChat__image--none"
+        .FormArea__SendBtn
+          = f.submit 'Send', class: "FormArea__SendBtn"

@@ -16,7 +16,7 @@
   .messages
     = render @messages      
   .form
-    =form_for [@group, @message] do |f|
+    =form_for [@group, @message]  do |f|
       .FormArea
         .TypeChat
           = f.text_field :content, class: "TypeChat__text", placeholder: "type a message"

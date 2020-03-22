@@ -67,6 +67,6 @@ gem 'erb2haml'
 gem 'font-awesome-sass'
 gem 'devise'
 gem 'pry-rails'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave'
 gem "mini_magick"
 gem 'jquery-rails'

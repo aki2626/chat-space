@@ -9,6 +9,7 @@ class GroupsController < ApplicationController
   end
 
   def create
+    binding.pry
     @group = Group.new(group_params)
     if @group.save
       redirect_to group_messages_path(@group), notice: 'グループを作成しました'
